@@ -5,7 +5,7 @@ This repo is dedicated to make bioinformatics resources available for anyone who
 |---|:---|
 | Author | Ahmed Sameh |
 | Mail | sameh7831@gmail.com |
-| Education | BSc in Biotechnology/Biomolecular Chemistry, \
+| Education | BSc in Biotechnology/Biomolecular Chemistry,
              Faculty of Science, Cairo University. |
 
 
