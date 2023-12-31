@@ -43,9 +43,9 @@ Below are road-maps and resources for both direction whether you decided to star
 | **Machine Learning Background** | 1- [Machine Learning specialization on Coursera](https://www.coursera.org/specializations/machine-learning-introduction?) <br /> 2- [Machine Learning Specialization](https://www.youtube.com/playlist?list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI) | 1-2 Months | - You can start this after finishing Mathematics. <br /> - Andrew NG is considered the most famous and the best one to explain Machine Learning in the world. |
 
 ### Extra Notes:
-Do not rush and give the process time. I recommend that you start learning in the same order of the above table, but at the end do what you see best for you!
-Practice makes perfect, make sure that the most important thing is to continuosly practice.
-Also, do not be shy to ask those who have experience about career advices, things you do not understand, or even an general inquiry. It is totally fine if they did not reply, be brave.
+- Do not rush and give the process time. I recommend that you start learning in the same order of the above table, but at the end do what you see best for you!
+- Practice makes perfect, make sure that the most important thing is to continuosly practice.
+- Also, do not be shy to ask those who have experience about career advices, things you do not understand, or even an general inquiry. It is totally fine if they did not reply, be brave.
 
 ## High-throughput sequencing (HTS) and Omics:
 
@@ -73,10 +73,10 @@ Also, do not be shy to ask those who have experience about career advices, thing
 | **Machine Learning Background** | 1- [Machine Learning specialization on Coursera](https://www.coursera.org/specializations/machine-learning-introduction?) <br /> 2- [Machine Learning Specialization](https://www.youtube.com/playlist?list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI) | 1-2 Months | - Same resources and notes as in [Structural Bioinformatics](#structural-bioinformatics) section. |
 
 ### Extra Notes:
-First of all, you have to decide and choose which track are you most interested in from Genomics, Transcriptomics, Proteomics, and Metabolomics.
-A very important repo which has lots of beneficial resources (I even used it as a reference) is the following [repo](https://github.com/MohmedSoudy/Bioinformatics-pipeline?tab=readme-ov-file).
-Practice makes perfect, make sure that the most important thing is to continuosly practice.
-Also, do not be shy to ask those who have experience about career advices, things you do not understand, or even an general inquiry. It is totally fine if they did not reply, be brave.
+- First of all, you have to decide and choose which track are you most interested in from Genomics, Transcriptomics, Proteomics, and Metabolomics.
+- A very important repo which has lots of beneficial resources (I even used it as a reference) is the following [repo](https://github.com/MohmedSoudy/Bioinformatics-pipeline?tab=readme-ov-file).
+- Practice makes perfect, make sure that the most important thing is to continuosly practice.
+- Also, do not be shy to ask those who have experience about career advices, things you do not understand, or even an general inquiry. It is totally fine if they did not reply, be brave.
 ------------------------------------------------------------------------------------------------------------
 
 
