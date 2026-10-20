@@ -1,0 +1,6 @@
+>sequence_a synthetic teaching sequence
+ACGTACGT
+>sequence_b ambiguous bases are excluded
+GGCCNN
+>sequence_c no GC bases
+ATATAT

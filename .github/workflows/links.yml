@@ -1,0 +1,23 @@
+name: Review resource links
+
+on:
+  schedule:
+    - cron: '20 7 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            content
+            scripts
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/check_links.py

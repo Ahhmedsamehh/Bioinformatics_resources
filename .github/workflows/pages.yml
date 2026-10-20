@@ -1,0 +1,56 @@
+name: Build and publish field guide
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: field-guide-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            content
+            scripts
+            site
+            guides
+            projects
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Build and check generated documentation
+        run: python3 scripts/build.py --check
+      - name: Validate catalog, site links, and teaching computation
+        run: python3 scripts/check.py
+      - name: Check browser script syntax
+        run: |
+          node --check site/assets/theme.js
+          node --check site/assets/app.js
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy field guide
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+_site/
+.venv/
+.cache/
+projects/*/results/
+projects/*/data/
+projects/workflow-basics/work/
+projects/workflow-basics/.nextflow*
+projects/workflow-basics/.snakemake/

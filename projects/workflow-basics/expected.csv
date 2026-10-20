@@ -1,0 +1,4 @@
+sequence_id,length,ambiguous_bases,gc_percent
+sequence_a,8,0,50.00
+sequence_b,6,2,100.00
+sequence_c,6,0,0.00
