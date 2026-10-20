@@ -1,0 +1,1207 @@
+{
+  "title": "Bioinformatics Resources",
+  "author": "Ahmed Sameh",
+  "description": "A friendly field guide to learning bioinformatics, building reproducible analyses, and exploring modern biological research.",
+  "reviewed": "2026-10-20",
+  "repository": "https://github.com/Ahhmedsamehh/Bioinformatics_resources",
+  "tracks": [
+    {
+      "id": "foundations",
+      "title": "Build your foundations",
+      "short": "Foundations",
+      "number": "01",
+      "color": "sage",
+      "level": "Beginner",
+      "description": "Get comfortable with code, biological data, and the questions good analyses ask.",
+      "intro": "Start with the skills your first project needs. You can learn the deeper mathematics alongside your work; completing every course here is not an entry requirement.",
+      "topics": [
+        {
+          "id": "programming",
+          "title": "Python, R, and the command line",
+          "level": "Beginner",
+          "description": "Choose a language for a concrete task, then learn to read, transform, and visualize a small dataset.",
+          "prerequisites": "No programming experience required.",
+          "concepts": [
+            "Python: variables, functions, tables, plotting, and small scripts.",
+            "R: data frames, factors, tidy data, plotting, and biological analysis packages.",
+            "Shell: paths, pipes, redirection, permissions, and inspecting a text file."
+          ],
+          "outcome": "Write a short script that reads a table, checks its columns, and saves a useful summary.",
+          "practice": "Use one small table in either Python or R. Report missing values, summarize one measurement by group, and plot the result. Explain the biological meaning of each column.",
+          "caution": "Choose one language for your first project. Language preference depends on the analysis and team; you do not need to learn Python and R simultaneously.",
+          "resources": [
+            "python",
+            "r4ds",
+            "carpentry",
+            "elzero"
+          ]
+        },
+        {
+          "id": "biological-data",
+          "title": "Biological data and file formats",
+          "level": "Beginner",
+          "description": "Understand what a file represents before choosing a tool to process it.",
+          "prerequisites": "Basic molecular biology and the ability to inspect a text file.",
+          "concepts": [
+            "Sequences and reads: FASTA, FASTQ, quality scores, and reference versions.",
+            "Alignments and annotation: SAM/BAM, VCF, BED, and GTF/GFF; learn coordinate conventions explicitly.",
+            "Analysis objects: count matrices, sample metadata, AnnData, and MuData.",
+            "Structures: PDB and mmCIF, chains, residues, assemblies, and identifiers."
+          ],
+          "outcome": "Explain the inputs, outputs, identifiers, and coordinate system of your chosen analysis.",
+          "practice": "Make a data dictionary for a tutorial dataset. Record its accession, organism, reference genome or structure, sample units, and file formats.",
+          "caution": "Gene symbols, stable identifiers, and reference builds are not interchangeable. Preserve the versions and mapping decisions used in your analysis.",
+          "resources": [
+            "carpentry",
+            "ensembl",
+            "ncbi-learn",
+            "anndata",
+            "pdb101"
+          ]
+        },
+        {
+          "id": "statistics",
+          "title": "Statistics and experimental design",
+          "level": "Beginner",
+          "description": "Connect statistical decisions to the biological question and experimental units.",
+          "prerequisites": "Basic tables and plots; learn probability concepts as needed.",
+          "concepts": [
+            "Biological versus technical replication, controls, randomization, and confounding.",
+            "Distributions, effect sizes, uncertainty, hypothesis tests, and multiple testing.",
+            "Linear models, covariates, batch effects, and exploratory data analysis.",
+            "For single-cell studies, identify the independent biological samples before testing."
+          ],
+          "outcome": "Describe the comparison, independent samples, covariates, and limitations of a small study.",
+          "practice": "Sketch two experimental designs: one where treatment is confounded with batch, and one where it is balanced. Explain what can be learned from each.",
+          "caution": "A small adjusted p-value does not establish a large effect or causality. Interpret effect sizes, design, and uncertainty together.",
+          "resources": [
+            "statsthinking",
+            "rnaseq",
+            "sc-best"
+          ]
+        },
+        {
+          "id": "reproducibility",
+          "title": "Git, environments, and research habits",
+          "level": "Beginner",
+          "description": "Make it possible for your future self and a collaborator to repeat your work.",
+          "prerequisites": "A small script or notebook.",
+          "concepts": [
+            "Git commits, branches, readable READMEs, and reviewable changes.",
+            "Separate input data, code, configuration, and generated results.",
+            "Record package versions, random seeds, parameters, and dataset accessions.",
+            "Use environments first; learn containers when your workflow needs portability."
+          ],
+          "outcome": "Share a small project with clear setup and rerun instructions.",
+          "practice": "Ask a peer to reproduce one plot using only your README. Record any missing dependency, parameter, or data-download instruction and repair it.",
+          "caution": "A notebook that ran once is not sufficient documentation. Restart the session and rerun it from the beginning before sharing.",
+          "resources": [
+            "git",
+            "carpentry",
+            "conda",
+            "quarto"
+          ]
+        },
+        {
+          "id": "math",
+          "title": "Mathematics when you need it",
+          "level": "Intermediate",
+          "description": "Build intuition for the mathematics behind the methods you actually use.",
+          "prerequisites": "School-level algebra; programming helps with experiments.",
+          "concepts": [
+            "Linear algebra: vectors, matrices, projections, eigenvectors, and PCA.",
+            "Probability: conditional probability, likelihood, and uncertainty.",
+            "Calculus and optimization: gradients, objectives, and iterative fitting."
+          ],
+          "outcome": "Explain one method's inputs, objective, assumptions, and outputs in plain language.",
+          "practice": "Apply PCA to a small numeric table, then explain what the axes describe and how scaling changes the result.",
+          "caution": "These topics are deeper study options. Do not delay an accessible first project until you have completed all of them.",
+          "resources": [
+            "linear-algebra",
+            "statsthinking",
+            "d2l"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structural",
+      "title": "Explore structures. Design proteins.",
+      "short": "Structures & protein design",
+      "number": "02",
+      "color": "clay",
+      "level": "Beginner to advanced",
+      "description": "Learn to inspect molecular structures, interpret predictions, and explore protein and binder design.",
+      "intro": "Begin by reading experimental structures and assessing their quality. Prediction, molecular simulation, and design are connected paths with different assumptions and validation needs.",
+      "topics": [
+        {
+          "id": "structure-literacy",
+          "title": "Structural biology and structure literacy",
+          "level": "Beginner",
+          "description": "Read a structure as evidence about a molecule and an experiment.",
+          "prerequisites": "Protein sequence and molecular biology basics.",
+          "concepts": [
+            "Protein architecture, interactions, thermodynamics, and structure–function relationships.",
+            "Experimental method, resolution where applicable, missing residues, and validation reports.",
+            "Chains, biological assemblies, sequence mapping, and molecular visualization."
+          ],
+          "outcome": "Inspect a structure and write a short account of what it supports and what remains uncertain.",
+          "practice": "Complete the protein-structure starter project, then locate a missing region or a validation concern in a second entry.",
+          "caution": "A deposited coordinate model is an interpretation of evidence. Check the experimental method and validation information before drawing conclusions.",
+          "resources": [
+            "pdb101",
+            "pdb-learn",
+            "chimerax",
+            "biopython"
+          ]
+        },
+        {
+          "id": "prediction",
+          "title": "Structure prediction and confidence",
+          "level": "Intermediate",
+          "description": "Understand the question a prediction answers and how to assess its reliability.",
+          "prerequisites": "Structure literacy and sequence alignment basics.",
+          "concepts": [
+            "Sequence-to-structure prediction, templates, alignments, and complexes.",
+            "Local confidence, relative-domain confidence, and model-specific quality measures.",
+            "Sequence correspondence, experimental comparisons, and sources of uncertainty."
+          ],
+          "outcome": "Explain why a predicted region or interface is more or less trustworthy.",
+          "practice": "Choose a protein with both experimental and predicted structures. Align the sequences first, inspect confidence, and document which regions are comparable.",
+          "caution": "Confidence scores are not interchangeable with experimental B-factors. A confident prediction alone does not establish binding, function, or a mechanism.",
+          "resources": [
+            "alphafold",
+            "af-confidence",
+            "colabfold",
+            "pdb101"
+          ]
+        },
+        {
+          "id": "binder-design",
+          "title": "Protein and binder design",
+          "level": "Advanced",
+          "description": "Follow a design problem from a biological objective to candidates that need experimental testing.",
+          "prerequisites": "Structure prediction and assessment, protein interactions, and basic scripting.",
+          "concepts": [
+            "Target preparation, biological assembly, accessible sites, and design constraints.",
+            "Backbone generation, sequence design, structure prediction, and candidate filtering.",
+            "Compare diffusion-based backbone design with optimization-based pipelines such as BindCraft.",
+            "Diversity, controls, expression and solubility considerations, and experimental validation."
+          ],
+          "outcome": "Describe a candidate-selection strategy and the evidence needed to test a proposed binder.",
+          "practice": "Read one published design study and map its stages, selection metrics, controls, and experimental outcomes. Begin with published outputs before scheduling expensive generation runs.",
+          "caution": "A favorable computational score is a screening signal. Report it separately from measured affinity, specificity, and experimental success.",
+          "resources": [
+            "rfdiffusion",
+            "proteinmpnn",
+            "alphafold",
+            "bindcraft"
+          ]
+        },
+        {
+          "id": "diffusion-for-design",
+          "title": "Diffusion models in molecular design",
+          "level": "Advanced",
+          "description": "Connect denoising and conditional generation to a biological design task.",
+          "prerequisites": "Basic machine learning; probability and linear algebra help with the deeper material.",
+          "concepts": [
+            "Forward corruption, learned denoising, sampling, and conditioning.",
+            "Representation choices, geometric constraints, and symmetry.",
+            "Training versus inference, diversity, and evaluation beyond visually plausible structures."
+          ],
+          "outcome": "Explain what is generated, what conditions the generation, and how candidates are evaluated.",
+          "practice": "Draw the sampling process for a binder-design example and identify where target information and constraints enter. Continue with the AI foundations path for the mathematics.",
+          "caution": "Learn the model's task and representation explicitly. Different diffusion systems do not share identical inputs, outputs, or validation criteria.",
+          "resources": [
+            "rfdiffusion",
+            "d2l"
+          ]
+        },
+        {
+          "id": "simulation",
+          "title": "Molecular simulation and biophysics",
+          "level": "Advanced",
+          "description": "Explore molecular motion through models with explicit physical assumptions.",
+          "prerequisites": "Thermodynamics, structural biology, and command-line basics.",
+          "concepts": [
+            "Force fields, parameterization, solvation, and boundary conditions.",
+            "Minimization, equilibration, sampling, replicates, and convergence.",
+            "Trajectory analysis and the relationship between observables and a biological question."
+          ],
+          "outcome": "Explain the assumptions and sampling limitations of a simulation study.",
+          "practice": "Follow an introductory simulation example and record the force field, ensemble, integration settings, and analysis choices.",
+          "caution": "A stable-looking trajectory alone does not demonstrate convergence or establish a biological mechanism.",
+          "resources": [
+            "openmm",
+            "gromacs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "omics",
+      "title": "Make sense of omics data",
+      "short": "Omics & single-cell",
+      "number": "03",
+      "color": "blue",
+      "level": "Beginner to advanced",
+      "description": "Move from sequencing foundations to single-cell, multimodal, perturbation, and immune repertoire analyses.",
+      "intro": "Choose a biological question and learn one analysis end to end. Bulk analysis, single-cell analysis, and other omics specialisms share foundations, but each needs its own experimental and statistical context.",
+      "topics": [
+        {
+          "id": "bulk-rnaseq",
+          "title": "Sequencing and bulk RNA-seq",
+          "level": "Beginner",
+          "description": "Connect read processing and quantification to sample-level statistical analysis.",
+          "prerequisites": "Basic R or a Galaxy introduction; statistics and sample metadata.",
+          "concepts": [
+            "Read QC, alignment or quantification, references, and gene-level counts.",
+            "Sample-level QC, design formulas, contrasts, and differential expression.",
+            "Effect sizes, multiple testing, gene-set interpretation, and reporting."
+          ],
+          "outcome": "Produce a reproducible comparison with a clear design, QC plots, and an interpreted results table.",
+          "practice": "Start with the count-based RNA-seq project. Then follow a full FASTQ-to-results tutorial to learn where those counts come from.",
+          "caution": "A count-based tutorial does not teach raw-read processing by itself. Keep normalization for visualization distinct from the model's input requirements.",
+          "resources": [
+            "rnaseq",
+            "deseq2",
+            "galaxy",
+            "nf-rnaseq"
+          ]
+        },
+        {
+          "id": "single-cell",
+          "title": "Single-cell RNA-seq foundations",
+          "level": "Intermediate",
+          "description": "Learn the core workflow before adding integration or complex models.",
+          "prerequisites": "R or Python, count matrices, and experimental design.",
+          "concepts": [
+            "Cell and sample QC, ambient RNA, doublets, and normalization.",
+            "Dimensionality reduction, clustering, marker evidence, and cell annotation.",
+            "Donor-aware comparisons, pseudobulk approaches, and differential abundance."
+          ],
+          "outcome": "Explain the evidence for an annotation and the experimental unit for a comparison.",
+          "practice": "Follow one small tutorial in Scanpy or Seurat. Keep a table recording every filtering decision and inspect how one changed threshold affects the result.",
+          "caution": "Clusters are analytical groupings, and annotation requires biological evidence. Preserve donor metadata throughout the workflow.",
+          "resources": [
+            "sc-best",
+            "scanpy",
+            "seurat",
+            "anndata"
+          ]
+        },
+        {
+          "id": "integration",
+          "title": "Dataset integration and scvi-tools",
+          "level": "Advanced",
+          "description": "Address technical differences while checking that meaningful biological variation is retained.",
+          "prerequisites": "A complete single-cell workflow, covariates, and batch-effect concepts.",
+          "concepts": [
+            "Integration across datasets versus integration across molecular modalities.",
+            "Reference mapping, batch covariates, latent representations, and scVI/scANVI.",
+            "Evaluation of biological conservation alongside technical mixing."
+          ],
+          "outcome": "Justify an integration strategy and describe how you checked its consequences.",
+          "practice": "Compare an unintegrated baseline with one integration method. Inspect known biological groups and sample composition as well as a low-dimensional plot.",
+          "caution": "A well-mixed embedding is not sufficient evidence of a good integration. Confounded study designs can make technical and biological effects difficult to separate.",
+          "resources": [
+            "scvi",
+            "sc-best"
+          ]
+        },
+        {
+          "id": "multiomics",
+          "title": "CITE-seq and multimodal analysis",
+          "level": "Advanced",
+          "description": "Relate RNA, protein, and chromatin measurements while respecting how they were collected.",
+          "prerequisites": "Single-cell foundations and basic integration concepts.",
+          "concepts": [
+            "CITE-seq RNA and antibody-derived tags; protein background and modality-specific QC.",
+            "Paired versus unpaired measurements, missing modalities, and MuData.",
+            "totalVI for RNA–protein data and MultiVI for RNA–chromatin accessibility data."
+          ],
+          "outcome": "Choose a method whose assumptions match the modalities and pairing in the experiment.",
+          "practice": "Follow the totalVI CITE-seq tutorial. Compare RNA and protein evidence for selected markers and document cases where they disagree.",
+          "caution": "Multi-omics is broader than single-cell RNA–protein analysis. Describe each modality and its measurement process before selecting an integration tool.",
+          "resources": [
+            "totalvi",
+            "multivi",
+            "mudata",
+            "sc-best"
+          ]
+        },
+        {
+          "id": "perturbations",
+          "title": "Single-cell perturbation analysis",
+          "level": "Advanced",
+          "description": "Study how cells respond to genetic, chemical, or environmental interventions.",
+          "prerequisites": "Single-cell foundations, experimental controls, and sample-level inference.",
+          "concepts": [
+            "Perturb-seq design, guide assignment, controls, and perturbation efficacy.",
+            "Differential expression, differential abundance, and heterogeneous responses.",
+            "Observed-response analysis versus prediction of unseen responses; held-out evaluation."
+          ],
+          "outcome": "Define an appropriate comparison and explain what a model evaluation does and does not test.",
+          "practice": "Use a Pertpy tutorial to compare perturbations with controls. Record replicate structure, guide assignment choices, and the intended generalization task.",
+          "caution": "Random cell-level splits can fail to test the generalization you care about. Design evaluation around held-out donors, conditions, or perturbations as appropriate.",
+          "resources": [
+            "pertpy",
+            "sc-best",
+            "scvi"
+          ]
+        },
+        {
+          "id": "immune-repertoires",
+          "title": "TCR, BCR, and immune repertoires",
+          "level": "Advanced",
+          "description": "Connect immune receptor sequences, clonotypes, and cellular phenotypes.",
+          "prerequisites": "Basic immunology and single-cell data handling.",
+          "concepts": [
+            "V(D)J sequences, chain pairing, productive receptors, and clonotype definitions.",
+            "Clonal expansion, diversity, overlap, and sampling depth.",
+            "Linking repertoire information to RNA expression and cell states."
+          ],
+          "outcome": "Explain a clonotype definition and distinguish clonal relationships from evidence of antigen specificity.",
+          "practice": "Complete a Scirpy tutorial and compare two reasonable clonotype definitions. Report how the interpretation changes.",
+          "caution": "Receptor similarity or clonal expansion alone does not establish shared antigen specificity. Document sequence and grouping criteria.",
+          "resources": [
+            "scirpy",
+            "airr"
+          ]
+        },
+        {
+          "id": "other-omics",
+          "title": "Other omics and directions to explore",
+          "level": "Intermediate",
+          "description": "Keep the wider field visible while choosing a tractable next specialization.",
+          "prerequisites": "Biological data literacy and statistics.",
+          "concepts": [
+            "Variant analysis, genome annotation, and reference-dependent interpretation.",
+            "Proteomics and metabolomics: experimental platforms, quantification, and data processing.",
+            "Spatial omics: tissue context, spatial dependence, and assay-specific analysis."
+          ],
+          "outcome": "Choose a specialization and find an introductory workflow appropriate to its data.",
+          "practice": "Choose one Galaxy learning pathway and map its raw data, processing stages, biological question, and outputs.",
+          "caution": "This is an orientation to additional fields, not a complete curriculum for each one. Use the specialist training materials for detailed methods.",
+          "resources": [
+            "galaxy",
+            "ebi-training",
+            "ensembl",
+            "sc-best"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workflows",
+      "title": "Build workflows that travel",
+      "short": "Workflows & reproducibility",
+      "number": "04",
+      "color": "ochre",
+      "level": "Intermediate",
+      "description": "Turn a working analysis into a documented, testable workflow with Nextflow or Snakemake.",
+      "intro": "Workflow engineering is shared across scientific tracks. Learn one engine first, then use a familiar analysis to understand dependencies, portability, and failure recovery.",
+      "topics": [
+        {
+          "id": "workflow-concepts",
+          "title": "From scripts to reproducible workflows",
+          "level": "Intermediate",
+          "description": "Learn the common ideas before committing to a particular engine.",
+          "prerequisites": "Shell basics, a working analysis script, and software environments.",
+          "concepts": [
+            "Tasks, input/output contracts, dependency graphs, and configuration.",
+            "Versioned software, containers, sample sheets, resource declarations, and logs.",
+            "Small fixtures, expected outputs, restart behavior, and provenance."
+          ],
+          "outcome": "Draw and implement a small analysis as a dependency graph.",
+          "practice": "Run the workflow-basics project as a plain Python script, then reproduce its expected output with one engine.",
+          "caution": "A workflow engine cannot repair unclear scientific assumptions or an incorrect analysis step. Validate the underlying computation first.",
+          "resources": [
+            "nextflow",
+            "snakemake",
+            "nfcore",
+            "apptainer"
+          ]
+        },
+        {
+          "id": "nextflow",
+          "title": "Nextflow and nf-core",
+          "level": "Intermediate",
+          "description": "Run, configure, and develop portable pipelines using dataflow concepts.",
+          "prerequisites": "Workflow concepts and command-line experience.",
+          "concepts": [
+            "Processes, channels, workflow composition, and modules.",
+            "Parameters, profiles, containers, executors, and resume behavior.",
+            "Using nf-core pipelines and understanding their documentation and quality conventions."
+          ],
+          "outcome": "Run a small Nextflow workflow, change a parameter, and explain its task dependencies.",
+          "practice": "Complete the official introductory training, then run main.nf in the workflow-basics project and compare its output with the reference file.",
+          "caution": "Start with a small local test profile. Check the data, storage, and compute requirements before running a production pipeline.",
+          "resources": [
+            "nextflow-training",
+            "nextflow",
+            "nfcore",
+            "nf-rnaseq"
+          ]
+        },
+        {
+          "id": "snakemake",
+          "title": "Snakemake",
+          "level": "Intermediate",
+          "description": "Express analysis steps as rules connected through their input and output files.",
+          "prerequisites": "Workflow concepts and basic Python.",
+          "concepts": [
+            "Rules, targets, wildcards, configuration, and dependency graphs.",
+            "Software environments, containers, resource declarations, and execution profiles.",
+            "Dry runs, logs, reports, and testing small examples."
+          ],
+          "outcome": "Write a small rule-based workflow and inspect what will run before executing it.",
+          "practice": "Run a dry run and then the Snakefile in the workflow-basics project. Change the input FASTA and predict which output should be recomputed.",
+          "caution": "Make all dependencies explicit. Hidden files, undeclared parameters, and changing environments undermine reproducibility.",
+          "resources": [
+            "snakemake",
+            "snakemake-tutorial",
+            "apptainer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "Use AI thoughtfully in research",
+      "short": "AI for biological research",
+      "number": "05",
+      "color": "lavender",
+      "level": "Beginner to advanced",
+      "description": "Understand biological models, work effectively with LLMs, and build agents whose results you can evaluate.",
+      "intro": "AI literacy has several entry points. Practical LLM use can begin early; training biological models and building tool-using agents require deeper foundations. Keep the scientific question and evidence visible at every stage.",
+      "topics": [
+        {
+          "id": "model-foundations",
+          "title": "Machine learning and biological models",
+          "level": "Intermediate",
+          "description": "Learn what a model represents, optimizes, and can reasonably generalize to.",
+          "prerequisites": "Basic Python, statistics, and introductory linear algebra.",
+          "concepts": [
+            "Training, validation, test sets, leakage, baselines, and distribution shift.",
+            "Embeddings and transformers; variational autoencoders and latent variables.",
+            "Diffusion and conditional generation, with links to molecular design.",
+            "Using a pretrained model versus fine-tuning or training a new one."
+          ],
+          "outcome": "Describe a model's objective, input representation, baseline, and evaluation task.",
+          "practice": "Read one scvi-tools model guide and one protein-design model description. Compare their inputs, objectives, outputs, and evidence of usefulness.",
+          "caution": "A benchmark score only speaks to its evaluation setup. Ask how data were split and whether the test resembles the intended scientific application.",
+          "resources": [
+            "d2l",
+            "mlcourse",
+            "scvi",
+            "rfdiffusion"
+          ]
+        },
+        {
+          "id": "llms",
+          "title": "Working with LLMs for science",
+          "level": "Beginner",
+          "description": "Use an LLM for bounded tasks with explicit context and inspectable outputs.",
+          "prerequisites": "A clear task and the ability to assess the result or consult a qualified reviewer.",
+          "concepts": [
+            "Provide the question, source material, constraints, and desired output format.",
+            "Ground literature summaries in supplied papers and check claims against the original text.",
+            "For code assistance, provide schemas and small examples, inspect changes, and run meaningful checks.",
+            "Record the model, date, inputs, important instructions, and human verification."
+          ],
+          "outcome": "Create a useful research aid with a record of its sources and checks.",
+          "practice": "Give an LLM a paper's methods section and ask for a table of reported parameters with supporting quotations and locations. Mark absent information as not reported, then verify every row yourself.",
+          "caution": "Fluent output can contain incorrect claims, citations, or code. Use suitable public or authorized data and check the service's data-handling terms before supplying unpublished or sensitive material.",
+          "resources": [
+            "llm-science",
+            "carpentry-ai",
+            "hf-course"
+          ]
+        },
+        {
+          "id": "agents",
+          "title": "Agentic AI and scientific tools",
+          "level": "Advanced",
+          "description": "Connect a model to tools while keeping execution and evaluation observable.",
+          "prerequisites": "Programming, APIs, practical LLM use, and a reproducible baseline task.",
+          "concepts": [
+            "Tool calling, structured inputs and outputs, retrieval, state, and execution traces.",
+            "Bounded tool permissions, explicit stopping conditions, and human review where needed.",
+            "Task-level evaluation, failure cases, tool-result verification, and cost tracking."
+          ],
+          "outcome": "Specify and evaluate a small agent against a simpler scripted baseline.",
+          "practice": "Build a read-only assistant over a few public tutorials. Require source locations for answers and test it on a fixed set of answerable and unanswerable questions.",
+          "caution": "Start with a narrow task and inspect the trace. Greater autonomy is not itself evidence of better scientific results.",
+          "resources": [
+            "hf-agents",
+            "carpentry-ai"
+          ]
+        },
+        {
+          "id": "ai-evaluation",
+          "title": "Evaluate and document AI-assisted work",
+          "level": "Intermediate",
+          "description": "Make it clear which results come from evidence, computation, and model suggestions.",
+          "prerequisites": "Practical LLM experience or an introductory machine-learning project.",
+          "concepts": [
+            "Reference examples, baselines, held-out tasks, and explicit success criteria.",
+            "Citation verification, numerical checks, reproducible tool outputs, and failure analysis.",
+            "Versioned prompts or instructions, model settings, tool versions, and limitations."
+          ],
+          "outcome": "Write a short evaluation report with successes, failures, and reproducibility details.",
+          "practice": "Compare an LLM-assisted solution with a manual or scripted baseline on five fixed tasks. Report factual accuracy and completion, not just writing quality.",
+          "caution": "The model's own confidence is not an independent check. Verify important claims and calculations against external evidence or deterministic computation.",
+          "resources": [
+            "llm-science",
+            "carpentry-ai",
+            "hf-agents",
+            "quarto"
+          ]
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "python",
+      "title": "The Python Tutorial",
+      "url": "https://docs.python.org/3/tutorial/",
+      "kind": "Documentation",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Some general programming familiarity; complete beginners can start with a guided lesson.",
+      "summary": "The official language tutorial. Use it as a reference while writing small scripts rather than reading everything before practicing."
+    },
+    {
+      "id": "r4ds",
+      "title": "R for Data Science, second edition",
+      "url": "https://r4ds.hadley.nz/",
+      "kind": "Book",
+      "level": "Beginner",
+      "cost": "Free online",
+      "language": "English",
+      "prerequisites": "No prior R experience.",
+      "summary": "A practical route through importing, transforming, visualizing, and communicating tabular data in R."
+    },
+    {
+      "id": "carpentry",
+      "title": "Data Carpentry: genomics lessons",
+      "url": "https://datacarpentry.org/lessons/#genomics",
+      "kind": "Tutorial",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "No prior command-line experience for the introductory lessons.",
+      "summary": "Learn project organization, the command line, sequence processing, and computing through biological examples."
+    },
+    {
+      "id": "elzero",
+      "title": "Elzero: Mastering Python",
+      "url": "https://elzero.org/category/courses/mastering-python/",
+      "kind": "Course",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "Arabic",
+      "prerequisites": "No prior Python experience.",
+      "summary": "An Arabic-language programming entry point retained from the original resource list. Pair the lessons with a small biological data task."
+    },
+    {
+      "id": "ensembl",
+      "title": "Ensembl training",
+      "url": "https://training.ensembl.org/",
+      "kind": "Tutorial",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic genetics.",
+      "summary": "Learn to navigate genome annotation, identifiers, comparative data, and Ensembl tools using worked training materials."
+    },
+    {
+      "id": "ncbi-learn",
+      "title": "NCBI Learn",
+      "url": "https://www.ncbi.nlm.nih.gov/learn/",
+      "kind": "Tutorial",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic molecular biology.",
+      "summary": "Find official introductions and training for NCBI databases and tools; choose a tutorial that matches your data source."
+    },
+    {
+      "id": "anndata",
+      "title": "AnnData documentation",
+      "url": "https://anndata.readthedocs.io/en/stable/",
+      "kind": "Documentation",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Python and basic single-cell matrices.",
+      "summary": "Understand the annotated matrix structure used in many Python single-cell workflows, including observations, variables, and layers."
+    },
+    {
+      "id": "pdb101",
+      "title": "PDB-101: understanding PDB data",
+      "url": "https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/introduction",
+      "kind": "Guide",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic protein biology.",
+      "summary": "A welcoming introduction to structure files, experimental information, assemblies, and interpretation."
+    },
+    {
+      "id": "statsthinking",
+      "title": "Statistical Thinking for the 21st Century",
+      "url": "https://statsthinking21.github.io/statsthinking21-core-site/",
+      "kind": "Book",
+      "level": "Beginner",
+      "cost": "Free online",
+      "language": "English",
+      "prerequisites": "Basic arithmetic and willingness to work through examples.",
+      "summary": "Develop statistical reasoning about data, probability, inference, and models before relying on a test by name."
+    },
+    {
+      "id": "rnaseq",
+      "title": "Bioconductor: gene-level RNA-seq workflow",
+      "url": "https://bioconductor.org/packages/release/workflows/html/rnaseqGene.html",
+      "kind": "Workflow",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic R, sample metadata, and introductory statistics.",
+      "summary": "Connect RNA-seq processing with exploratory analysis and differential expression through a documented workflow."
+    },
+    {
+      "id": "sc-best",
+      "title": "Single-cell Best Practices",
+      "url": "https://www.sc-best-practices.org/",
+      "kind": "Book",
+      "level": "Intermediate",
+      "cost": "Free online",
+      "language": "English",
+      "prerequisites": "Basic Python or R and single-cell biology.",
+      "summary": "A question-oriented reference for single-cell analysis across modalities, including preprocessing, statistics, and integration."
+    },
+    {
+      "id": "git",
+      "title": "Software Carpentry: Version Control with Git",
+      "url": "https://swcarpentry.github.io/git-novice/",
+      "kind": "Tutorial",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic command-line use.",
+      "summary": "Practice tracking changes, working with remote repositories, and collaborating on a small project."
+    },
+    {
+      "id": "conda",
+      "title": "Conda: managing environments",
+      "url": "https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html",
+      "kind": "Documentation",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic command-line use.",
+      "summary": "Create and document isolated software environments, including environment files that can be shared with collaborators."
+    },
+    {
+      "id": "quarto",
+      "title": "Quarto: getting started",
+      "url": "https://quarto.org/docs/get-started/",
+      "kind": "Tutorial",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic R or Python for executable examples.",
+      "summary": "Combine analysis, narrative, and outputs in a reproducible report rather than copying results into an unrelated document."
+    },
+    {
+      "id": "linear-algebra",
+      "title": "MIT OpenCourseWare: Linear Algebra",
+      "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/",
+      "kind": "Course",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Algebra; consult the course's own prerequisite guidance.",
+      "summary": "A deeper route into matrices, projections, and related concepts that support PCA and machine learning."
+    },
+    {
+      "id": "d2l",
+      "title": "Dive into Deep Learning",
+      "url": "https://d2l.ai/",
+      "kind": "Book",
+      "level": "Intermediate",
+      "cost": "Free online",
+      "language": "English",
+      "prerequisites": "Python, probability, linear algebra, and basic calculus for deeper chapters.",
+      "summary": "Build conceptual and practical foundations in deep learning; select chapters relevant to the model you are studying."
+    },
+    {
+      "id": "pdb-learn",
+      "title": "RCSB PDB: learning resources",
+      "url": "https://www.rcsb.org/",
+      "kind": "Database",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic protein biology.",
+      "summary": "Find experimental structures and inspect entry-specific methods, sequence information, and validation evidence."
+    },
+    {
+      "id": "chimerax",
+      "title": "UCSF ChimeraX tutorials",
+      "url": "https://www.rbvi.ucsf.edu/chimerax/tutorials.html",
+      "kind": "Tutorial",
+      "level": "Beginner",
+      "cost": "Tutorials free; software terms vary by use",
+      "language": "English",
+      "prerequisites": "Basic structural biology.",
+      "summary": "Learn molecular visualization through worked examples; check the current software license for your intended use."
+    },
+    {
+      "id": "biopython",
+      "title": "Biopython Tutorial and Cookbook",
+      "url": "https://biopython.org/docs/latest/Tutorial/",
+      "kind": "Documentation",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic Python.",
+      "summary": "Practical biological sequence and structure handling, including parsers used in the protein-structure starter project."
+    },
+    {
+      "id": "alphafold",
+      "title": "EMBL-EBI: AlphaFold practical guide",
+      "url": "https://www.ebi.ac.uk/training/online/courses/alphafold/",
+      "kind": "Course",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic protein structure knowledge.",
+      "summary": "Learn access routes, interpretation, strengths, limitations, and confidence assessment for predicted structures."
+    },
+    {
+      "id": "af-confidence",
+      "title": "Interpreting AlphaFold confidence scores",
+      "url": "https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/",
+      "kind": "Guide",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Protein structure basics.",
+      "summary": "Understand local confidence and relative-domain uncertainty before using a prediction to support a biological claim."
+    },
+    {
+      "id": "colabfold",
+      "title": "ColabFold",
+      "url": "https://github.com/sokrypton/ColabFold",
+      "kind": "Tool",
+      "level": "Intermediate",
+      "cost": "Code free; compute access varies",
+      "language": "English",
+      "prerequisites": "Structure prediction basics and familiarity with notebooks or command-line tools.",
+      "summary": "An accessible prediction toolkit with examples and execution options. Check current compute availability before planning a run."
+    },
+    {
+      "id": "rfdiffusion",
+      "title": "RFdiffusion",
+      "url": "https://github.com/RosettaCommons/RFdiffusion",
+      "kind": "Tool",
+      "level": "Advanced",
+      "cost": "Code available; GPU compute may cost",
+      "language": "English",
+      "prerequisites": "Protein design, structure assessment, and command-line experience.",
+      "summary": "Explore diffusion-based protein backbone generation and conditional design through the authors' code and examples."
+    },
+    {
+      "id": "proteinmpnn",
+      "title": "ProteinMPNN",
+      "url": "https://github.com/dauparas/ProteinMPNN",
+      "kind": "Tool",
+      "level": "Advanced",
+      "cost": "Code available; compute may cost",
+      "language": "English",
+      "prerequisites": "Protein structures, sequence design, and scripting.",
+      "summary": "Study sequence design conditioned on a protein backbone as a distinct stage in a broader design workflow."
+    },
+    {
+      "id": "openmm",
+      "title": "OpenMM user guide",
+      "url": "https://docs.openmm.org/latest/userguide/",
+      "kind": "Documentation",
+      "level": "Advanced",
+      "cost": "Free; compute may cost",
+      "language": "English",
+      "prerequisites": "Molecular simulation basics and Python.",
+      "summary": "Learn simulation setup, execution, and analysis with explicit attention to the physical model and settings."
+    },
+    {
+      "id": "gromacs",
+      "title": "GROMACS documentation",
+      "url": "https://manual.gromacs.org/current/",
+      "kind": "Documentation",
+      "level": "Advanced",
+      "cost": "Free; compute may cost",
+      "language": "English",
+      "prerequisites": "Thermodynamics, molecular structures, and command-line use.",
+      "summary": "A reference for molecular dynamics methods, file formats, commands, and reproducible simulation configuration."
+    },
+    {
+      "id": "deseq2",
+      "title": "DESeq2 vignette",
+      "url": "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+      "kind": "Documentation",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "R and experimental design.",
+      "summary": "Understand count-based differential expression, model design, contrasts, diagnostics, and interpretation."
+    },
+    {
+      "id": "galaxy",
+      "title": "Galaxy Training Network",
+      "url": "https://training.galaxyproject.org/",
+      "kind": "Tutorial",
+      "level": "Beginner",
+      "cost": "Training free; server quotas vary",
+      "language": "English",
+      "prerequisites": "Choose an introductory pathway; many require no programming.",
+      "summary": "Hands-on biological analysis tutorials across sequencing, proteomics, metabolomics, and other domains."
+    },
+    {
+      "id": "nf-rnaseq",
+      "title": "nf-core/rnaseq",
+      "url": "https://nf-co.re/rnaseq",
+      "kind": "Workflow",
+      "level": "Intermediate",
+      "cost": "Code free; compute and storage may cost",
+      "language": "English",
+      "prerequisites": "RNA-seq concepts, Nextflow, and suitable compute access.",
+      "summary": "A production workflow to examine after a smaller tutorial; learn its inputs, profiles, QC outputs, and documented options."
+    },
+    {
+      "id": "scanpy",
+      "title": "Scanpy tutorials",
+      "url": "https://scanpy.readthedocs.io/en/stable/tutorials/index.html",
+      "kind": "Tutorial",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic Python and single-cell matrices.",
+      "summary": "Work through Python single-cell analysis examples and inspect how preprocessing decisions affect downstream results."
+    },
+    {
+      "id": "seurat",
+      "title": "Seurat guided clustering tutorial",
+      "url": "https://satijalab.org/seurat/articles/pbmc3k_tutorial.html",
+      "kind": "Tutorial",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic R and single-cell concepts.",
+      "summary": "An R entry point to single-cell QC, normalization, dimensionality reduction, clustering, and marker exploration."
+    },
+    {
+      "id": "scvi",
+      "title": "scvi-tools tutorials and model guides",
+      "url": "https://docs.scvi-tools.org/en/stable/",
+      "kind": "Documentation",
+      "level": "Advanced",
+      "cost": "Free; compute may cost",
+      "language": "English",
+      "prerequisites": "Python, single-cell analysis, and statistics.",
+      "summary": "Choose probabilistic models by task and modality, and read their assumptions alongside the worked tutorials."
+    },
+    {
+      "id": "totalvi",
+      "title": "totalVI: RNA and protein analysis",
+      "url": "https://docs.scvi-tools.org/en/stable/user_guide/models/totalvi.html",
+      "kind": "Guide",
+      "level": "Advanced",
+      "cost": "Free; compute may cost",
+      "language": "English",
+      "prerequisites": "CITE-seq concepts, Python, and single-cell QC.",
+      "summary": "A model guide for joint RNA–protein analysis, with links to CITE-seq examples and discussion of the observation model."
+    },
+    {
+      "id": "multivi",
+      "title": "MultiVI: RNA and chromatin accessibility",
+      "url": "https://docs.scvi-tools.org/en/stable/user_guide/models/multivi.html",
+      "kind": "Guide",
+      "level": "Advanced",
+      "cost": "Free; compute may cost",
+      "language": "English",
+      "prerequisites": "Single-cell RNA/ATAC concepts and Python.",
+      "summary": "Study joint RNA–chromatin accessibility modeling, including the paired and unpaired data setting."
+    },
+    {
+      "id": "mudata",
+      "title": "MuData documentation",
+      "url": "https://mudata.scverse.org/latest/",
+      "kind": "Documentation",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Python and AnnData.",
+      "summary": "Understand how multimodal observations and modality-specific matrices are organized and linked."
+    },
+    {
+      "id": "pertpy",
+      "title": "Pertpy: perturbation analysis",
+      "url": "https://pertpy.scverse.org/en/stable/",
+      "kind": "Tutorial",
+      "level": "Advanced",
+      "cost": "Free; compute may cost",
+      "language": "English",
+      "prerequisites": "Single-cell analysis and experimental design.",
+      "summary": "Explore guide assignment, perturbation efficacy, response comparisons, and prediction through documented examples."
+    },
+    {
+      "id": "scirpy",
+      "title": "Scirpy: immune receptor analysis",
+      "url": "https://scirpy.scverse.org/en/latest/",
+      "kind": "Tutorial",
+      "level": "Advanced",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Python, single-cell data, and basic immunology.",
+      "summary": "Learn repertoire QC, clonotype analysis, and integration of receptor information with cell-level measurements."
+    },
+    {
+      "id": "airr",
+      "title": "AIRR Community documentation",
+      "url": "https://docs.airr-community.org/en/stable/",
+      "kind": "Documentation",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic adaptive immune repertoire concepts.",
+      "summary": "Use community terminology, data standards, and metadata guidance when handling receptor repertoire datasets."
+    },
+    {
+      "id": "ebi-training",
+      "title": "EMBL-EBI on-demand training",
+      "url": "https://www.ebi.ac.uk/training/on-demand",
+      "kind": "Course",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Vary by course.",
+      "summary": "Find focused introductions to biological databases and analysis areas, including routes into additional omics fields."
+    },
+    {
+      "id": "nextflow",
+      "title": "Nextflow documentation",
+      "url": "https://docs.seqera.io/nextflow",
+      "kind": "Documentation",
+      "level": "Intermediate",
+      "cost": "Free; compute may cost",
+      "language": "English",
+      "prerequisites": "Command-line use and workflow concepts.",
+      "summary": "Reference processes, channels, modules, profiles, executors, and dependency handling while building a small pipeline."
+    },
+    {
+      "id": "nextflow-training",
+      "title": "Nextflow community training",
+      "url": "https://training.nextflow.io/",
+      "kind": "Course",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic shell skills; start with the introductory material.",
+      "summary": "A guided route from running a first pipeline to composing and configuring workflows."
+    },
+    {
+      "id": "nfcore",
+      "title": "nf-core documentation",
+      "url": "https://nf-co.re/docs/",
+      "kind": "Documentation",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Nextflow basics.",
+      "summary": "Learn conventions for using and developing community pipelines, including configuration and contribution guidance."
+    },
+    {
+      "id": "snakemake",
+      "title": "Snakemake documentation",
+      "url": "https://snakemake.readthedocs.io/en/stable/",
+      "kind": "Documentation",
+      "level": "Intermediate",
+      "cost": "Free; compute may cost",
+      "language": "English",
+      "prerequisites": "Basic Python and command-line use.",
+      "summary": "Understand rules, file dependencies, software environments, execution, and reporting."
+    },
+    {
+      "id": "snakemake-tutorial",
+      "title": "Snakemake general-use tutorial",
+      "url": "https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html",
+      "kind": "Tutorial",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic Python and shell use.",
+      "summary": "Build and extend an example workflow while learning dependency handling, configuration, and execution."
+    },
+    {
+      "id": "apptainer",
+      "title": "Apptainer user guide",
+      "url": "https://apptainer.org/docs/user/latest/",
+      "kind": "Documentation",
+      "level": "Intermediate",
+      "cost": "Free; infrastructure may cost",
+      "language": "English",
+      "prerequisites": "Linux and software environment basics.",
+      "summary": "Learn container execution and reproducibility concepts relevant to shared research computing systems."
+    },
+    {
+      "id": "mlcourse",
+      "title": "Google Machine Learning Crash Course",
+      "url": "https://developers.google.com/machine-learning/crash-course",
+      "kind": "Course",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Python and introductory algebra/statistics; check module guidance.",
+      "summary": "An applied introduction to model fitting, generalization, data handling, and evaluation."
+    },
+    {
+      "id": "carpentry-ai",
+      "title": "Developing Software with Generative AI",
+      "url": "https://carpentries-incubator.github.io/software-development-with-genai/",
+      "kind": "Tutorial",
+      "level": "Intermediate",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Some programming experience; this is an evolving Carpentries Incubator lesson.",
+      "summary": "Practice AI-assisted software development through a research-computing lesson. The material is under development; check its current status and verify generated code."
+    },
+    {
+      "id": "hf-course",
+      "title": "Hugging Face LLM course",
+      "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "kind": "Course",
+      "level": "Intermediate",
+      "cost": "Free; optional compute may cost",
+      "language": "English",
+      "prerequisites": "Python and introductory machine learning for implementation chapters.",
+      "summary": "Understand language models and their practical ecosystem; pair technical learning with source verification and task-level checks."
+    },
+    {
+      "id": "hf-agents",
+      "title": "Hugging Face Agents Course",
+      "url": "https://huggingface.co/learn/agents-course/unit0/introduction",
+      "kind": "Course",
+      "level": "Advanced",
+      "cost": "Course free; external services may cost",
+      "language": "English",
+      "prerequisites": "Python, APIs, and basic LLM familiarity.",
+      "summary": "An introduction to agent concepts, tools, and implementation. Evaluate any example on a bounded scientific task before expanding it."
+    },
+    {
+      "id": "llm-science",
+      "title": "Ten simple rules for using large language models in science",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011767",
+      "kind": "Paper",
+      "level": "Beginner",
+      "cost": "Open access",
+      "language": "English",
+      "prerequisites": "A scientific task you want to support with an LLM.",
+      "summary": "A science-specific starting point for transparent, critical LLM use, with discussion of verification and appropriate applications."
+    },
+    {
+      "id": "bindcraft",
+      "title": "BindCraft",
+      "url": "https://github.com/martinpacesa/BindCraft",
+      "kind": "Tool",
+      "level": "Advanced",
+      "cost": "Code available; dependency licenses and GPU costs vary",
+      "language": "English",
+      "prerequisites": "Binder design, structure assessment, and suitable GPU access.",
+      "summary": "An optimization-based binder-design pipeline combining AlphaFold-based design, sequence design, and filtering. Compare its strategy with diffusion-based approaches and inspect dependency terms."
+    }
+  ],
+  "projects": [
+    {
+      "id": "rna-seq",
+      "title": "Your first RNA-seq comparison",
+      "track": "omics",
+      "level": "Beginner",
+      "description": "Use a small packaged airway count dataset to compare treated and untreated samples while accounting for cell line.",
+      "question": "Which genes show evidence of a treatment-associated expression change in this paired experimental design?",
+      "prerequisites": "Basic R, count matrices, and introductory experimental design.",
+      "data": "The Bioconductor airway example dataset: four cell lines measured with and without dexamethasone. Starts from counts, not FASTQ files.",
+      "outputs": [
+        "Sample metadata and a PCA plot",
+        "A differential-expression table with effect sizes and adjusted p-values",
+        "An MA plot and software session information"
+      ],
+      "steps": [
+        "Read the sample metadata and explain why cell line belongs in the design.",
+        "Run the supplied R script and inspect the PCA before interpreting differential expression.",
+        "Choose three genes, report effect sizes and adjusted p-values, and state the limits of the comparison.",
+        "Use the linked full RNA-seq workflow to learn how raw reads become counts."
+      ],
+      "resources": [
+        "rnaseq",
+        "deseq2"
+      ]
+    },
+    {
+      "id": "protein-structure",
+      "title": "Read your first protein structure",
+      "track": "structural",
+      "level": "Beginner",
+      "description": "Inspect the experimental crambin structure 1CRN and turn its metadata and residue information into a short scientific report.",
+      "question": "What does this experimental structure show, and what evidence should accompany a structural interpretation?",
+      "prerequisites": "Basic Python and protein biology.",
+      "data": "RCSB PDB entry 1CRN, downloaded as mmCIF by the supplied script. The entry is an experimental structure, not an AlphaFold prediction.",
+      "outputs": [
+        "A downloaded mmCIF file and a residue summary table",
+        "A report of experimental method, resolution, chains, and residue counts",
+        "An interpretation exercise linking structure to validation information"
+      ],
+      "steps": [
+        "Run the supplied script, open the structure in a molecular viewer, and identify chains and secondary structure.",
+        "Read the entry's experimental and validation information before describing its quality.",
+        "Explain what the residue B-factors represent in this experimental context.",
+        "For a later extension, choose a matched experimental/predicted protein pair and assess sequence correspondence and prediction confidence."
+      ],
+      "resources": [
+        "pdb101",
+        "biopython",
+        "chimerax",
+        "af-confidence"
+      ]
+    },
+    {
+      "id": "workflow-basics",
+      "title": "One analysis, two workflow engines",
+      "track": "workflows",
+      "level": "Intermediate",
+      "description": "Calculate sequence GC content with a plain script, then reproduce the same output using Nextflow or Snakemake.",
+      "question": "How can explicit dependencies make a small analysis easier to run and verify?",
+      "prerequisites": "Python and shell basics; install one workflow engine for the extension.",
+      "data": "Three tiny synthetic FASTA records shipped with the project. Ambiguous bases are counted separately and excluded from the GC denominator.",
+      "outputs": [
+        "A per-sequence CSV summary",
+        "A comparison against an exact expected result",
+        "A dependency graph and a documented rerun experiment"
+      ],
+      "steps": [
+        "Run the Python analysis and compare the CSV with expected.csv.",
+        "Choose one engine and run its supplied workflow on the same input.",
+        "Change one sequence, rerun, and inspect which task executes.",
+        "Explain how a new quality-check step would connect to the existing workflow."
+      ],
+      "resources": [
+        "nextflow-training",
+        "snakemake-tutorial"
+      ]
+    }
+  ]
+}

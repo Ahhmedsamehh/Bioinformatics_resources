@@ -1,0 +1,20 @@
+from pathlib import Path
+
+# Paths are relative to this file, so this also works with snakemake -s /path/Snakefile.
+PROJECT = Path(workflow.basedir)
+FASTA = str(PROJECT / "sequences.fasta")
+ANALYSIS = str(PROJECT / "gc_content.py")
+OUTPUT = str(PROJECT / "results/snakemake/gc.csv")
+
+rule all:
+    input:
+        OUTPUT
+
+rule gc_content:
+    input:
+        fasta=FASTA,
+        analysis=ANALYSIS
+    output:
+        OUTPUT
+    shell:
+        "python3 {input.analysis:q} {input.fasta:q} {output:q}"

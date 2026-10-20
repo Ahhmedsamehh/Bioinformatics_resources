@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" role="img" aria-labelledby="title desc">
+  <title id="title">Your bioinformatics learning map</title>
+  <desc id="desc">Start with a question and shared foundations. Choose structural bioinformatics or omics, apply your learning in a project, and connect workflows and AI across both paths.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10" fill="#7a8974"/></marker></defs>
+  <g font-family="system-ui,sans-serif" text-anchor="middle">
+    <g fill="none" stroke="#7a8974" stroke-width="1.5" marker-end="url(#arrow)"><path d="M208 161H255"/><path d="M450 161H487V89H530"/><path d="M487 161V233H530"/><path d="M752 89H789V161H824"/><path d="M752 233H789V161"/><path d="M354 270V202"/><path d="M642 270V260"/></g>
+    <rect x="12" y="119" width="196" height="84" rx="12" fill="#e9eee1" stroke="#c7d2c0"/>
+    <text x="110" y="151" font-size="12" fill="#52654c">START HERE</text><text x="110" y="178" font-size="17" fill="#29362a">Ask a biological question</text>
+    <rect x="255" y="119" width="195" height="84" rx="12" fill="#e9eee1" stroke="#c7d2c0"/>
+    <text x="352" y="152" font-size="18" fill="#29362a">Shared foundations</text><text x="352" y="179" font-size="12" fill="#52654c">Code · Data · Statistics</text>
+    <rect x="530" y="47" width="222" height="84" rx="12" fill="#f3e8df" stroke="#dfc9ba"/>
+    <text x="641" y="80" font-size="17" fill="#694739">Structures &amp; design</text><text x="641" y="106" font-size="12" fill="#694739">Prediction · Binders · Simulation</text>
+    <rect x="530" y="191" width="222" height="69" rx="12" fill="#e7eff1" stroke="#bfd0d5"/>
+    <text x="641" y="219" font-size="17" fill="#365f72">Omics &amp; single-cell</text><text x="641" y="242" font-size="12" fill="#365f72">RNA · Multimodal · Perturbations</text>
+    <rect x="824" y="119" width="164" height="84" rx="12" fill="#eee8f2" stroke="#d2c2dc"/>
+    <text x="906" y="152" font-size="18" fill="#655178">Make a project</text><text x="906" y="179" font-size="12" fill="#655178">Practice · Explain · Share</text>
+    <rect x="255" y="285" width="497" height="91" rx="12" fill="#f2eddc" stroke="#d8cfad"/>
+    <text x="503" y="317" font-size="17" fill="#735c28">Tools that connect the paths</text><text x="503" y="345" font-size="13" fill="#735c28">Reproducible workflows · Nextflow · Snakemake · AI for research</text>
+    <text x="500" y="405" font-family="Georgia,serif" font-size="15" font-style="italic" fill="#64705d">Choose a starting point. Learn the next thing your question needs.</text>
+  </g>
+</svg>
