@@ -384,6 +384,7 @@
           "practice": "Choose one Galaxy learning pathway and map its raw data, processing stages, biological question, and outputs.",
           "caution": "This is an orientation to additional fields, not a complete curriculum for each one. Use the specialist training materials for detailed methods.",
           "resources": [
+            "mass-spectrometry-basics",
             "galaxy",
             "ebi-training",
             "ensembl",
@@ -980,6 +981,17 @@
       "language": "English",
       "prerequisites": "Basic adaptive immune repertoire concepts.",
       "summary": "Use community terminology, data standards, and metadata guidance when handling receptor repertoire datasets."
+    },
+    {
+      "id": "mass-spectrometry-basics",
+      "title": "Mass spectrometry basics — Lennart Martens",
+      "url": "https://www.youtube.com/watch?v=bS78rIYvFBE&list=PLXxp6nsBenSX_W8DiOocKJ0laNauYNdYl&index=1",
+      "kind": "Video series",
+      "level": "Beginner",
+      "cost": "Free",
+      "language": "English",
+      "prerequisites": "Basic protein biology and chemistry; no programming required.",
+      "summary": "An introduction to mass spectrometry for proteomics, starting with amino acids and proteins and covering ion sources, analyzers, detectors, tandem mass spectrometry, and peptide fragmentation."
     },
     {
       "id": "ebi-training",

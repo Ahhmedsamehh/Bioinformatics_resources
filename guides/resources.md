@@ -122,6 +122,9 @@ Collection reviewed: 2026-10-20.
 - [AIRR Community documentation](https://docs.airr-community.org/en/stable/) — Documentation · Intermediate · Free · English. Use community terminology, data standards, and metadata guidance when handling receptor repertoire datasets.
   - Prerequisites: Basic adaptive immune repertoire concepts.
 
+- [Mass spectrometry basics — Lennart Martens](https://www.youtube.com/watch?v=bS78rIYvFBE&list=PLXxp6nsBenSX_W8DiOocKJ0laNauYNdYl&index=1) — Video series · Beginner · Free · English. An introduction to mass spectrometry for proteomics, starting with amino acids and proteins and covering ion sources, analyzers, detectors, tandem mass spectrometry, and peptide fragmentation.
+  - Prerequisites: Basic protein biology and chemistry; no programming required.
+
 - [EMBL-EBI on-demand training](https://www.ebi.ac.uk/training/on-demand) — Course · Beginner · Free · English. Find focused introductions to biological databases and analysis areas, including routes into additional omics fields.
   - Prerequisites: Vary by course.
 

@@ -32,7 +32,7 @@ The scientific tracks emphasize structural bioinformatics and omics. They are tw
 
 ## What makes a resource useful here?
 
-Each topic includes prerequisites, a learning outcome, a practice activity, and interpretation guidance. The **51 annotated resources** include format, level, language, access information, and a reason to use them. Most materials are free to read; software, hosted services, and compute can have separate terms or costs.
+Each topic includes prerequisites, a learning outcome, a practice activity, and interpretation guidance. The **52 annotated resources** include format, level, language, access information, and a reason to use them. Most materials are free to read; software, hosted services, and compute can have separate terms or costs.
 
 Arabic-language programming material is included, and suggestions for more Arabic resources are welcome. Most specialist resources are currently in English.
 

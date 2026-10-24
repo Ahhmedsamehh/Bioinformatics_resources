@@ -283,6 +283,9 @@ This is an orientation to additional fields, not a complete curriculum for each 
 
 ### A few good resources
 
+- [Mass spectrometry basics — Lennart Martens](https://www.youtube.com/watch?v=bS78rIYvFBE&list=PLXxp6nsBenSX_W8DiOocKJ0laNauYNdYl&index=1) — Video series · Beginner · Free · English. An introduction to mass spectrometry for proteomics, starting with amino acids and proteins and covering ion sources, analyzers, detectors, tandem mass spectrometry, and peptide fragmentation.
+  - Prerequisites: Basic protein biology and chemistry; no programming required.
+
 - [Galaxy Training Network](https://training.galaxyproject.org/) — Tutorial · Beginner · Training free; server quotas vary · English. Hands-on biological analysis tutorials across sequencing, proteomics, metabolomics, and other domains.
   - Prerequisites: Choose an introductory pathway; many require no programming.
 
